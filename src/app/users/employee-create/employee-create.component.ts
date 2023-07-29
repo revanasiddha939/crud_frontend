@@ -36,7 +36,7 @@ export class EmployeeCreateComponent implements OnInit {
   	{
   		if (window.confirm('Are you sure?')) {
 	  	console.log(this.employee);
-	  	this.http.put('https://crud-hjce.onrender.com/update/'+this.id,this.employee).subscribe((data:any) => {
+	  	this.http.put('https://crud-hjce.onrender.com/api/update/'+this.id,this.employee).subscribe((data:any) => {
             alert(data.message)
 		        this.router.navigate(['/employees-list']);
 		  	});
